@@ -1,0 +1,44 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Fase 1') {
+            steps {
+                script {
+                    echo 'Mensaje de la Fase 1'
+                }
+            }
+        }
+        
+        stage('Fase 2') {
+            steps {
+                script {
+                    echo 'Mensaje de la Fase 2'
+                }
+            }
+        }
+        
+        stage('Fase 3') {
+            steps {
+                script {
+                    echo 'Mensaje de la Fase 3'
+                }
+            }
+        }
+    }
+
+    post {
+        always {          
+            deleteDir()
+            sh "echo 'fase always'"
+        }
+        success {
+            sh "echo 'fase success'"
+        }
+
+        failure {
+            sh "echo 'fase failure'"
+        }
+    }  
+
+}
