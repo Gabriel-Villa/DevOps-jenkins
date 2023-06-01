@@ -26,3 +26,7 @@ Change useSecurity to ***false***
 ```
 
 Restart the service
+
+### 3. Failed to connect to repository : Command "git ls-remote -h -- https://github.com/Gabriel-Villa/DevOps-jenkins.git HEAD" returned status code 128:
+
+Check if the repository is private , have to be public
